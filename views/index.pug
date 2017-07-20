@@ -1,6 +1,22 @@
 extends layout
 
 block content
-	h1= 'Welcome to ORM Middleware'
-	a.btn.btn-default(href='/displayall') Display All
-	a.btn.btn-default(href='/displayById') Display by ID
+	h1= 'Welcome to Flying Drogon'
+	form.navbar-form.navbar(action='/takeoff', method='post')
+		.form-group
+			input.btn.btn-default(type='submit', value='takeoff')
+	form.navbar-form.navbar(action='/land', method='post')
+		.form-group
+			input.btn.btn-default(type='submit', value='land')
+	form.navbar-form.navbar(action='/rotate90', method='post')
+		.form-group
+			input.btn.btn-default(type='submit', value='rotate90')
+	form.navbar-form.navbar(action='/rotate180', method='post')
+		.form-group
+			input.btn.btn-default(type='submit', value='rotate180')
+	form.navbar-form.navbar(action='/rotate270', method='post')
+		.form-group
+			input.btn.btn-default(type='submit', value='rotate270')
+	form.navbar-form.navbar(action='/stop', method='post')
+		.form-group
+			input.btn.btn-default(type='submit', value='stop')
