@@ -1,22 +1,31 @@
 extends layout
 
 block content
-	h1= 'Welcome to Flying Drogon'
-	form.navbar-form.navbar(action='/takeoff', method='post')
-		.form-group
-			input.btn.btn-default(type='submit', value='takeoff')
-	form.navbar-form.navbar(action='/land', method='post')
-		.form-group
-			input.btn.btn-default(type='submit', value='land')
-	form.navbar-form.navbar(action='/rotate90', method='post')
-		.form-group
-			input.btn.btn-default(type='submit', value='rotate90')
-	form.navbar-form.navbar(action='/rotate180', method='post')
-		.form-group
-			input.btn.btn-default(type='submit', value='rotate180')
-	form.navbar-form.navbar(action='/rotate270', method='post')
-		.form-group
-			input.btn.btn-default(type='submit', value='rotate270')
-	form.navbar-form.navbar(action='/stop', method='post')
-		.form-group
-			input.btn.btn-default(type='submit', value='stop')
+	div.header
+	.fluid-container
+		.row
+			.col-lg-12.col-md-12.row1
+				form.navbar-form.navbar(action='/takeoff', method='post')
+					.form-group
+						input.btn.btn-default.drogon_button_default(type='image', src='/images/takeoff.jpg')
+				form.navbar-form.navbar(action='/land', method='post')
+					.form-group
+						input.btn.btn-default.drogon_button_default(type='image', src='/images/land.jpg')
+				form.navbar-form.navbar(action='/stop', method='post')
+					.form-group
+						input.btn.btn-default.drogon_button_default(type='image', src='/images/hover.jpg')
+		.row
+			.col-lg-12.col-md-12.row2
+				form.navbar-form.navbar(action='/rotate90', method='post')
+					.form-group
+						input.btn.btn-default.drogon_button_default2(type='submit', value='90')
+				form.navbar-form.navbar(action='/rotate180', method='post')
+					.form-group
+						input.btn.btn-default.drogon_button_default2(type='submit', value='180')
+				form.navbar-form.navbar(action='/rotate270', method='post')
+					.form-group
+						input.btn.btn-default.drogon_button_default2(type='submit', value='270')
+				form.navbar-form.navbar(action='/rotate270', method='post')
+					.form-group
+						input.btn.btn-default.drogon_button_default2(type='submit', value='360')
+
