@@ -7,25 +7,30 @@ block content
 			.col-lg-12.col-md-12.row1
 				form.navbar-form.navbar(action='/takeoff', method='post')
 					.form-group
-						input.btn.btn-default.drogon_button_default(type='image', src='/images/takeoff.jpg')
-				form.navbar-form.navbar(action='/land', method='post')
+						input.btn.btn-default.drogon_button_default(type='image', src='/images/takeoff1.png')
+				form.navbar-form.navbar(action='/moveforward', method='post')
 					.form-group
-						input.btn.btn-default.drogon_button_default(type='image', src='/images/land.jpg')
+						input.btn.btn-default.drogon_button_default(type='image', src='/images/moveForward.png')
+				form.navbar-form.navbar(action='/rotateClockwise', method='post')
+					.form-group
+						input.btn.btn-default.drogon_button_default(type='image', src='/images/rotateclockwise.png')
 				form.navbar-form.navbar(action='/stop', method='post')
 					.form-group
 						input.btn.btn-default.drogon_button_default(type='image', src='/images/hover.jpg')
+				form.navbar-form.navbar(action='/rotateCounterClockwise', method='post')
+					.form-group
+						input.btn.btn-default.drogon_button_default(type='image', src='/images/rotateanticlockwise.png')
+				form.navbar-form.navbar(action='/moveforward', method='post')
+					.form-group
+						input.btn.btn-default.drogon_button_default(type='image', src='/images/movebackward.png')
+				form.navbar-form.navbar(action='/land', method='post')
+					.form-group
+						input.btn.btn-default.drogon_button_default(type='image', src='/images/land1.png')
+				
+				
+				
 		.row
-			.col-lg-12.col-md-12.row2
-				form.navbar-form.navbar(action='/rotate90', method='post')
+			.col-lg-12.col-md-12.row1
+				form.navbar-form.navbar(action='/attackmode', method='post')
 					.form-group
-						input.btn.btn-default.drogon_button_default2(type='submit', value='90')
-				form.navbar-form.navbar(action='/rotate180', method='post')
-					.form-group
-						input.btn.btn-default.drogon_button_default2(type='submit', value='180')
-				form.navbar-form.navbar(action='/rotate270', method='post')
-					.form-group
-						input.btn.btn-default.drogon_button_default2(type='submit', value='270')
-				form.navbar-form.navbar(action='/rotate270', method='post')
-					.form-group
-						input.btn.btn-default.drogon_button_default2(type='submit', value='360')
-
+						input(type='image', src='/images/bull.png')

@@ -12,18 +12,7 @@ router.get('/', function(req, res,next) {
 router.post('/takeoff', function(req, res,next) {
 	console.log('Flying Drogon');
 	Drogon.takeoff();
-	console.log('Takeoff Successfull and now hovering');
 });
-
-
-	// SC.get('/tracks', {
-	//  genres: "todays Hits"	  
-	// }).then(function(tracks) {
-	//     var searchresultset = tracks;
-	//     //console.log(searchresultset);
-	//     renderList(searchresultset)
-	// });
-
 
 //Land Function 
 router.post('/land', function(req, res,next) {
@@ -31,7 +20,6 @@ router.post('/land', function(req, res,next) {
 	Drogon.land();
 	res.render('index');
 });
-
 
 //Stop Function 
 router.post('/stop', function(req, res,next) {
@@ -41,35 +29,40 @@ router.post('/stop', function(req, res,next) {
 });
 
 //Rotate 90 Degrees working
-// router.post('/rotate90', function(req, res,next) {
-// 	console.log('Rotataing Drogon to 90 Degrees');
-// 	Drogon.rotate90()
-// 	res.render('index');
-// });
-
-//Rotate 90 Degrees with promise
-router.post('/rotate90', function(req, res,next) {
-	console.log('Rotating Drogon to 90 Degrees');
-	var rotate90 = new Promise (function (reject,resolve){
-	console.log(rotate90);	
-	Drogon.rotate90();
-	}).then(function (){
-   console.log('Rotating Successfull');
-	});
-});	
+router.post('/rotateClockwise', function(req, res,next) {
+	console.log('Rotating Drogon to Clockwise');
+	//Drogon.stop(5000,function(){
+		Drogon.rotateClockwise();
+		res.render('index');
+});
+	
+//};
 
 //Rotate 180 Degrees
-router.post('/rotate180', function(req, res,next) {
-	console.log('Rotataing Drogon to 180 Degrees');
-	Drogon.rotate180();
+router.post('/rotateCounterClockwise', function(req, res,next) {
+	console.log('Rotating Drogon to anti Clockwise');
+	Drogon.rotateCounterClockwise();
 	res.render('index');
 });
 
-//Rotate 270 Degrees
-router.post('/rotate270', function(req, res,next) {
-	console.log('Rotating Drogon to 270 Degrees');
-	Drogon.rotate270();
+//capture pngstream
+router.post('/attackmode', function(req, res,next) {
+	console.log('RedBull Mode');
+	Drogon.attackmode();
 	res.render('index');
 });
 
+
+router.post('/moveforward', function(req, res,next) {
+	console.log('forwarding');
+	Drogon.moveForward();
+	res.render('index');
+});
+
+
+router.post('/detectfaces', function(req, res,next) {
+	console.log('detectfaces');
+	Drogon.detectfaces();
+	res.render('index');
+});
 module.exports = router;
